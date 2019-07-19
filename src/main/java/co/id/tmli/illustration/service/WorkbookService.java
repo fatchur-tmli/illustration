@@ -36,7 +36,7 @@ public class WorkbookService {
         String path = "/config/Agency.xlsx";     
         ClassPathResource cpr = new ClassPathResource("config/AGENCY.xlsx");
         //try (InputStream xlsx = new FileInputStream(ResourceUtils.getFile("classpath:config/Agency.xlsx"))) {            
-        try (InputStream xlsx = new FileInputStream(cpr.getFile())) {            
+        try (InputStream xlsx = cpr.getInputStream()) {            
             POIFSFileSystem pfs = new POIFSFileSystem(xlsx);
             EncryptionInfo info = new EncryptionInfo(pfs);
             Decryptor decryptor = Decryptor.getInstance(info);

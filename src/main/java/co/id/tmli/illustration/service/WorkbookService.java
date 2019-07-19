@@ -11,7 +11,6 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import co.id.tmli.illustration.utils.Cacher;
 import java.io.FileInputStream;
-import java.io.IOException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
@@ -33,9 +32,9 @@ public class WorkbookService {
         return cacher.get();
     }
 	
-    private Workbook loadWorkbook() {             
+    private Workbook loadWorkbook() {         
         String path = "/config/Agency.xlsx";     
-        ClassPathResource cpr = new ClassPathResource("config/Agency.xlsx");
+        ClassPathResource cpr = new ClassPathResource("config/AGENCY.xlsx");
         //try (InputStream xlsx = new FileInputStream(ResourceUtils.getFile("classpath:config/Agency.xlsx"))) {            
         try (InputStream xlsx = new FileInputStream(cpr.getFile())) {            
             POIFSFileSystem pfs = new POIFSFileSystem(xlsx);

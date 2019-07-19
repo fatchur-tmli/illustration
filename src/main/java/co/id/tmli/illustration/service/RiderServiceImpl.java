@@ -5,11 +5,9 @@ import co.id.tmli.illustration.model.Rider;
 import co.id.tmli.illustration.service.repo.RiderRepo;
 import co.id.tmli.illustration.utils.CurrencyEnum;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-
 
 public class RiderServiceImpl implements RiderService {
 
@@ -64,7 +62,7 @@ public class RiderServiceImpl implements RiderService {
 
     @Override
     public List<Rider> getRidersByBundledProduct(String productCode) {
-        ObservableList<Rider> items = FXCollections.observableArrayList();
+        List<Rider> items = Arrays.asList();
         for (Rider rider : riderRepo.getRiders()) {
             if (Constants.RIDERGROUP_EMBEDDED.equalsIgnoreCase(rider.getGroupCode())
                     && rider.getBundledProduct().equals(productCode)) {

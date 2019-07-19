@@ -56,9 +56,8 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.12</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/lombok-edge.jar</systemPath>
+            <version>1.18.4</version>
+            <scope>provided</scope>            
         </dependency>
 
         <dependency>

@@ -22,7 +22,7 @@ import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 @Immutable
 public class ExcelReadHelper {
 	
-	private static final Logger s_aLogger = LoggerFactory.getLogger(ExcelReadHelper.class);
+    private static final Logger s_aLogger = LoggerFactory.getLogger(ExcelReadHelper.class);
 
     private ExcelReadHelper() {
     }

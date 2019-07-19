@@ -1,14 +1,13 @@
 package co.id.tmli.illustration.model;
 
 import co.id.tmli.illustration.utils.Constants;
-import javafx.beans.property.SimpleDoubleProperty;
 
 @lombok.Data
 public class RiderValue implements Rider {
 
     Rider rider;
     Rider riderParent;
-    final SimpleDoubleProperty valueProperty = new SimpleDoubleProperty();
+    Double valueProperty = new Double(0);
     
     // == add rider hsr property
     private String hsrType;
@@ -18,13 +17,15 @@ public class RiderValue implements Rider {
     private String hsrBiayaCoSharing;
 
     public Double getValue() {
-        return valueProperty.get();
+        return valueProperty;
     }
 
     public void setValue(Double v) {
-        valueProperty.set(v);
+        this.valueProperty = v;
     }
 
+    
+    
     public RiderValue(Rider rider) {
         this.rider = rider;
     }

@@ -10,8 +10,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 
 public class Constants {
     
@@ -42,11 +40,11 @@ public class Constants {
     public static final int MIN_PREMIUM_TERM_4_YEARS = 4;
     public static final int MIN_PREMIUM_TERM_10_YEARS = 10;
             
-    public static final ObservableList<String> ROOM_BOARD = FXCollections.observableArrayList(
+    public static final List<String> ROOM_BOARD = Arrays.asList(
             "1000", "1500","3000","6000","10000","20000"
     );  
     
-    public static final ObservableList<String> BEDDED = FXCollections.observableArrayList(
+    public static final List<String> BEDDED = Arrays.asList(
             "Executive 1", "Executive 2", "Executive 3"
     );
     

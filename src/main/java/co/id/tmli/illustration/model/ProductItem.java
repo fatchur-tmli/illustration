@@ -2,9 +2,6 @@ package co.id.tmli.illustration.model;
 
 import java.io.Serializable;
 
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
-
 @SuppressWarnings("serial")
 @lombok.Data
 public class ProductItem implements Serializable {
@@ -13,10 +10,10 @@ public class ProductItem implements Serializable {
     public static final String ITEM_TYPE_PRODUCT = "product";
     public static final String PRODUCT_GROUP_TRADITIONAL = "TRADITIONAL";
     public static final String PRODUCT_GROUP_UNITLINK = "UNITLINK";
-    private final StringProperty itemTypeProperty = new SimpleStringProperty();
-    private final StringProperty productGroupProperty = new SimpleStringProperty();
-    private final StringProperty productCodeProperty = new SimpleStringProperty();
-    private final StringProperty valueProperty = new SimpleStringProperty();
+    private final String itemTypeProperty = new String();
+    private final String productGroupProperty = new String();
+    private final String productCodeProperty = new String();
+    private final String valueProperty = new String();
     private boolean syariahProduct;
     private String planCode;
     private String legalNumber;
@@ -49,35 +46,35 @@ public class ProductItem implements Serializable {
     }
 
     public final void setItemType(String type) {
-        getItemTypeProperty().set(type);
+        getItemTypeProperty();
     }
 
     public final String getItemType() {
-        return getItemTypeProperty().get();
+        return getItemTypeProperty();
     }
 
     public final void setProductName(String value) {
-        getValueProperty().set(value);
+        getValueProperty();
     }
 
     public final String getProductName() {
-        return getValueProperty().get();
+        return getValueProperty();
     }
 
     public final void setProductGroup(String group) {
-        getProductGroupProperty().set(group);
+        getProductGroupProperty();
     }
 
     public final String getProductGroup() {
-        return getProductGroupProperty().get();
+        return getProductGroupProperty();
     }
 
     public final void setProductCode(String code) {
-        getProductCodeProperty().set(code);
+        getProductCodeProperty();
     }
 
     public final String getProductCode() {
-        return getProductCodeProperty().get();
+        return getProductCodeProperty();
     }
 
     @Override

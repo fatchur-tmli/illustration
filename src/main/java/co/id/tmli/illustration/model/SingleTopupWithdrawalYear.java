@@ -1,61 +1,56 @@
 package co.id.tmli.illustration.model;
 
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-
 public class SingleTopupWithdrawalYear {
 
-    private final IntegerProperty year = new SimpleIntegerProperty(0);
-    private final DoubleProperty topup = new SimpleDoubleProperty(0);
-    private final DoubleProperty withdrawal = new SimpleDoubleProperty(0);
+    private Integer year = new Integer(0);
+    private Double topup = new Double(0);
+    private Double withdrawal = new Double(0);
 
     public SingleTopupWithdrawalYear(int year, double topup, double withdrawal) {
-        this.year.set(year);
-        this.topup.set(topup);
-        this.withdrawal.set(withdrawal);
+        this.year = year;
+        this.topup = topup;
+        this.withdrawal = withdrawal;
     }
 
     public Double getWithdrawal() {
-        return withdrawal.get();
-    }
-
-    public void setWithdrawal(Double value) {
-        withdrawal.set(value);
-    }
-
-    public DoubleProperty withdrawalProperty() {
         return withdrawal;
     }
 
-    public double getTopup() {
-        return topup.get();
+    public void setWithdrawal(Double withdrawal) {
+        this.withdrawal = withdrawal;
+    }        
+
+    public Double withdrawalProperty() {
+        return withdrawal;
     }
 
-    public void setTopup(double value) {
-        topup.set(value);
-    }
-
-    public DoubleProperty topupProperty() {
+    public Double getTopup() {
         return topup;
     }
 
-    public int getYear() {
-        return year.get();
+    public void setTopup(Double topup) {
+        this.topup = topup;
     }
 
-    public void setYear(int value) {
-        year.set(value);
+    public Double topupProperty() {
+        return topup;
     }
 
-    public IntegerProperty yearProperty() {
+    public Integer getYear() {
+        return year;
+    }
+
+    public void setYear(Integer year) {
+        this.year = year;
+    }
+
+    public Integer yearProperty() {
         return year;
     }
 
     @Override
     public String toString() {
-        return "SingleTopupWithdrawalYear{" + "year=" + year.get() + ", topup=" + topup.get() + ", withdrawal=" + withdrawal.get() + '}';
+        return "SingleTopupWithdrawalYear{" + "year=" + year + ", topup=" + topup + ", withdrawal=" + withdrawal + '}';
     }
 
 }

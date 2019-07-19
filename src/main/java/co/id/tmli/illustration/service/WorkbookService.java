@@ -35,7 +35,7 @@ public class WorkbookService {
 	
     private Workbook loadWorkbook() {             
         String path = "/config/Agency.xlsx";     
-        ClassPathResource cpr = new ClassPathResource("config/Agency.xlsx");
+        ClassPathResource cpr = new ClassPathResource("/config/Agency.xlsx");
         //try (InputStream xlsx = new FileInputStream(ResourceUtils.getFile("classpath:config/Agency.xlsx"))) {            
         try (InputStream xlsx = new FileInputStream(cpr.getFile())) {            
             POIFSFileSystem pfs = new POIFSFileSystem(xlsx);

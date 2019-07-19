@@ -13,8 +13,6 @@ import java.util.Map;
 import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import net.objecthunter.exp4j.ExpressionBuilder;
 import static co.id.tmli.illustration.utils.Constants.ONE_HUNDRED;
 import static co.id.tmli.illustration.utils.Constants.FALSE;
@@ -29,6 +27,8 @@ import java.io.ByteArrayOutputStream;
 import net.objecthunter.exp4j.function.Function;
 import static co.id.tmli.illustration.utils.MoneyFormatter.format;
 import static co.id.tmli.illustration.utils.Constants.TMOptimaHealthHospitalSurgery;
+import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -406,13 +406,13 @@ public class Helper {
 //        return true;
 //    }
 
-    public static ObservableList<Integer> asdsdsds(String a,
+    public static List<Integer> asdsdsds(String a,
             int b, int c) {
         if (a == null || a.equalsIgnoreCase("V")) {
             return null;
         }
-        ObservableList<Integer> d = FXCollections.observableArrayList();
-        ObservableList<Integer> e = sdswas(a);
+        List<Integer> d = Arrays.asList();
+        List<Integer> e = sdswas(a);
         for (Integer period : e) {
             if (b + period <= c) {
                 d.add(period);
@@ -426,12 +426,12 @@ public class Helper {
         return date.format(format);
     }
 
-    public static ObservableList<Integer> sdswas(String str) {
+    public static List<Integer> sdswas(String str) {
         if (str != null) {
             if (str.toUpperCase().trim().equalsIgnoreCase("V")) {
                 return null;
             } else {
-                ObservableList<Integer> list = FXCollections.observableArrayList();
+                List<Integer> list = Arrays.asList();
                 for (String year : str.split(",")) {
                     list.add(Integer.parseInt(year.trim()));
                 }
@@ -441,12 +441,12 @@ public class Helper {
         return null;
     }
 
-    public static ObservableList<String> parseCsvAsList(String str) {
+    public static List<String> parseCsvAsList(String str) {
         if (str != null) {
             if (str.toUpperCase().trim().equalsIgnoreCase("V")) {
                 return null;
             } else {
-                ObservableList<String> list = FXCollections.observableArrayList();
+                List<String> list = Arrays.asList();
                 for (String year : str.split(",")) {
                     list.add(year.trim());
                 }
@@ -456,12 +456,12 @@ public class Helper {
         return null;
     }
 
-    public static ObservableList<String> ijtkd(String str, CurrencyEnum currency) {
+    public static List<String> ijtkd(String str, CurrencyEnum currency) {
         if (str != null) {
             if (str.toUpperCase().trim().equalsIgnoreCase("V")) {
                 return null;
             } else {
-                ObservableList<String> list = FXCollections.observableArrayList();
+                List<String> list = Arrays.asList();
                 for (String year : str.split(",")) {
                     list.add(format(Double.parseDouble(year.trim()), currency));
                 }

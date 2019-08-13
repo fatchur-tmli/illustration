@@ -32,7 +32,7 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
             .title("Sales Illustration API Documentation")
             .description("API Documentation")
-            .license("Apache 2.0")
+            .license("Apache 3.0")
             .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
             .termsOfServiceUrl("")
             .version("v1.0.0")

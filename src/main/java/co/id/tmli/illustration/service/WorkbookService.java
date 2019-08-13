@@ -10,11 +10,9 @@ import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import co.id.tmli.illustration.utils.Cacher;
-import java.io.FileInputStream;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
-import org.springframework.util.ResourceUtils;
 
 
 @Component
@@ -34,8 +32,7 @@ public class WorkbookService {
 	
     private Workbook loadWorkbook() {         
         String path = "/config/Agency.xlsx";     
-        ClassPathResource cpr = new ClassPathResource("config/AGENCY.xlsx");
-        //try (InputStream xlsx = new FileInputStream(ResourceUtils.getFile("classpath:config/Agency.xlsx"))) {            
+        ClassPathResource cpr = new ClassPathResource("config/AGENCY.xlsx");       
         try (InputStream xlsx = cpr.getInputStream()) {            
             POIFSFileSystem pfs = new POIFSFileSystem(xlsx);
             EncryptionInfo info = new EncryptionInfo(pfs);
